@@ -1,4 +1,5 @@
 {
   "text.autoconfig.charm-uploader.option.charm": "Charm Uploader Options",
-  "text.autoconfig.charm-uploader.option.charm.charm_report_enable": "Report Charms"
+  "text.autoconfig.charm-uploader.option.charm.charm_report_enable": "Report Charms",
+  "text.autoconfig.charm-uploader.option.charm.charm_report_enable.@Tooltip": "Enable or disable charms uploads to fallen forum"
 }
