@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "charm-uploader",
+	"version": "${version}",
+	"name": "Charm Uploader",
+	"description": "Uploads Charms to the Fallen Forum",
+	"authors": [
+		"NiamN"
+	],
+	"contact": {
+		"homepage": "https://fallenforum.com/charms",
+		"sources": ""
+	},
+	"license": "All-Rights-Reserved",
+	"icon": "assets/charm-uploader/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.nima.cu.CharmUploader"
+		],
+		"modmenu": [
+			"net.nima.cu.CharmUploaderModMenuApi"
+		]
+	},
+	"mixins": [
+		"charm-uploader.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
