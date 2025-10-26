@@ -42,13 +42,13 @@ public class CharmUpload {
         postCharms(charms, shard, at, type)
                 .thenAccept(response -> {
                     if (response.statusCode() == 200) {
-                        LOGGER.info("Charms were sent to the server");
+                        // LOGGER.info("Charms were sent to the server");
                     } else {
-                        CHATTER.error("Failed to upload charms. Status: " + response.statusCode());
+                        LOGGER.error("Failed to upload charms. Status: {}", response.statusCode());
                     }
                 })
                 .exceptionally(e -> {
-                    CHATTER.error("Error uploading charms: " + e.getMessage());
+                    LOGGER.error("Error uploading charms: {}", e.getMessage());
                     return null;
                 });
     }

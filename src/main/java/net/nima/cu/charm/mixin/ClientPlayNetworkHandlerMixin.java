@@ -41,7 +41,9 @@ public abstract class ClientPlayNetworkHandlerMixin implements TickablePacketLis
 
         NetworkThreadUtils.forceMainThread(packet, this, MinecraftClient.getInstance());
 
+        MinecraftClient client = MinecraftClient.getInstance();
         ClientPlayerEntity player = MinecraftClient.getInstance().player;
+        world = client.world;
         if (player == null) return;
         int cId = packet.getCollectorEntityId();
         int pId = player.getId();
